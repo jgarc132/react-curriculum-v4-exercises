@@ -13,10 +13,8 @@ export default function StudentWork() {
   ];
   return (
     <div>
-      {/* add JSX here */}
       <h1>About Me</h1>
       <p>
-        {' '}
         Hello! My name is {name} and I am {age}. I am from El Paso, Texas. I'm
         currently doing CTD's Advanced React Class and plan on furthering my
         career as a Software Engineer.
