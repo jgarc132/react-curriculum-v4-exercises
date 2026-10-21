@@ -15,10 +15,11 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  });
+  }, []);
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
-// (Write your explanation here)
+// Since useEffect needs a second parameter we can pass an empty array after
+// the arrow function so it will only run on the first render
