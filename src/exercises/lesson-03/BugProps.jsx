@@ -11,21 +11,20 @@
 
   Use the commented "Explanation" section at the bottom of this lesson's components.
 */
-
-export default function BugProps({ name = 'friend' }) {
-  let message = 'Hello, ' + name;
-
-  function handleChange() {
-    message = 'Hi, ' + name + '!';
-  }
-
+import { useState } from 'react';
+export default function BugProps() {
+  const [message, setMessage] = useState('Hello, friend');
   return (
     <div>
       <p>{message}</p>
-      <button onClick={handleChange}>Change Greeting</button>
+      <button onClick={() => setMessage('You clicked the button Yay!')}>
+        Change Greeting
+      </button>
     </div>
   );
 }
 
 // Explanation:
-// (Write your explanation here)
+// first I imported useState then i got ride of the code saving the variable anmd the other two lines of code
+// then we made a hook to store and update the message with setMessage. i also added am arrow function on the
+//onClick to change the greeting once it is clicked
