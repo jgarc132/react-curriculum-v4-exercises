@@ -6,8 +6,9 @@ export default function BugEventPropagation() {
     alert("RED BOX CLICKED ❌ Don't show me!");
   }
 
-  function handleInnerClick() {
+  function handleInnerClick(event) {
     alert('Button Clicked ✅');
+    event.stopPropagation();
   }
 
   return (
@@ -22,3 +23,12 @@ export default function BugEventPropagation() {
     </>
   );
 }
+
+/*
+  I added a stopPropagation in order to tell React that the click ends there instead for going
+  up the tree to the parent and showing the parent Alert. In other words the click doesnt reach 
+  the <div> so it doesn't show the other alert message. Bubbling is when two handlers happen one after another
+  when a parent element and child element since the button is nested insde the <div>
+  a click on the button also counts as a click on the div but nothing is set in place
+  keeping react from going to the parent element and running that action.
+*/

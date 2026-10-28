@@ -11,8 +11,8 @@ export default function Parent() {
   return (
     <div>
       <h2>Parent-Child Communication</h2>
-      <p>Counter: {count}</p>
-      <Child />
+      <p>Counter: {count} </p>
+      <Child increment={increment} />
     </div>
   );
 }
