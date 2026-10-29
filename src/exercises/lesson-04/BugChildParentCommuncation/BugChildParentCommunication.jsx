@@ -6,3 +6,9 @@ import Parent from './Parent';
 export default function BugChildParentCommunication() {
   return <Parent />;
 }
+
+/**
+ * Passed a prop to Child in this case a function which it uses when the button is clicked to incriment the counter
+ *
+ *
+ */
