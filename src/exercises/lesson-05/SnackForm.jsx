@@ -21,7 +21,6 @@ export default function SnackForm({
       handleRatingFocus();
       return;
     }
-
     if (isEditing) {
       updateSnack(editingSnack.id, name, rating);
     } else {
